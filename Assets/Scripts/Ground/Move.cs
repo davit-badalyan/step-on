@@ -5,20 +5,19 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     private Player player;
-    public float speed = 3.0f;
 
     private void Start()
     {
         player = GameObject.Find("Player").GetComponent<Player>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        MoveBack();
+        FollowPlayer();
     }
 
-    private void MoveBack()
+    private void FollowPlayer()
     {
-        transform.Translate(Vector3.back * speed * Time.deltaTime);
+        transform.position = new Vector3(0, 0, player.transform.position.z);
     }
 }
