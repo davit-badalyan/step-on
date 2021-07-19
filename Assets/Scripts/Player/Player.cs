@@ -56,6 +56,16 @@ public class Player : MonoBehaviour
         transform.position = new Vector3(0, 0, transform.position.z);
     }
 
+    public void OnLeftStepComplete()
+    {
+        SetRightLegActive();
+    }
+
+    public void OnRightStepComplete()
+    {
+        SetLeftLegActive();
+    }
+
     public void SetLeftLegActive()
     {
         animator.SetBool("isLeftLegActive", true);
@@ -66,5 +76,27 @@ public class Player : MonoBehaviour
     {
         animator.SetBool("isRightLegActive", true);
         animator.SetBool("isLeftLegActive", false);
+    }
+
+    public void SetLeftTransition()
+    {
+        bool isLeftLegActive = animator.GetBool("isLeftLegActive");
+
+        if (!isLeftLegActive)
+        {
+            animator.SetTrigger("transition");
+            SetLeftLegActive();
+        }
+    }
+
+    public void SetRightTransition()
+    {
+        bool isRightLegActive = animator.GetBool("isRightLegActive");
+
+        if (!isRightLegActive)
+        {
+            animator.SetTrigger("transition");
+            SetRightLegActive();
+        }
     }
 }

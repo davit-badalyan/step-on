@@ -19078,7 +19078,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.5
-    functionName: SetRightLegActive
+    functionName: OnLeftStepComplete
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

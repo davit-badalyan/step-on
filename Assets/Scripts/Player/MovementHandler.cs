@@ -8,14 +8,14 @@ public class MovementHandler : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            player.SetLeftLegActive();
-        }
-
         if (Input.GetKeyDown(KeyCode.D))
         {
-            player.SetRightLegActive();
+            player.SetLeftTransition();
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            player.SetRightTransition();
         }
     }
 }
