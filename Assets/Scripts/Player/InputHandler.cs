@@ -8,6 +8,14 @@ public class InputHandler : MonoBehaviour
 
     private void Update()
     {
-        //
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            player.animationHandler.SetLeftTransition();
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            player.animationHandler.SetRightTransition();
+        }
     }
 }

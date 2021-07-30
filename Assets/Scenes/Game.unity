@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 537009336}
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &537009335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +169,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputHandler: {fileID: 537009335}
   movementHandler: {fileID: 537009334}
-  startPosition: {x: 0, y: 0, z: 0}
+  animationHandler: {fileID: 537009337}
+--- !u!114 &537009337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537009331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659d567a135c5dc4497d3e53353be886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 537009336}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
